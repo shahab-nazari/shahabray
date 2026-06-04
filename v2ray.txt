@@ -25,7 +25,7 @@ cat > /usr/local/etc/xray/config.json << EOF
           "dest": "www.microsoft.com:443",
           "xver": 0,
           "serverNames": ["www.microsoft.com", "microsoft.com"],
-          "privateKey": "YD1SrWH4w1MC69dwUf-VBAqEurYJN01l3hz_FLPAXrHU",
+          "privateKey": "EHwfZj9v2rZyWIUXvuoMVEQnUFAfyYTvVJh6tRoZVUQ",
           "shortIds": ["01234567", "abcdef12"],
           "spiderX": "/"
         }
