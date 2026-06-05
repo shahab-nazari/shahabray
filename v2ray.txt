@@ -1,42 +1,19 @@
-cat > /usr/local/etc/xray/config.json << EOF
 {
-  "log": {
-    "loglevel": "warning"
-  },
-  "inbounds": [
-    {
-      "port": 443,
-      "protocol": "vless",
-      "tag": "vless-reality",
-      "settings": {
-        "clients": [
-          {
-            "id": "a14b84f2-2f66-47ee-b90e-543fe4313b1d",
-            "flow": "xtls-rprx-vision"
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "dest": "www.microsoft.com:443",
-          "xver": 0,
-          "serverNames": ["www.microsoft.com", "microsoft.com"],
-          "privateKey": "EHwfZj9v2rZyWIUXvuoMVEQnUFAfyYTvVJh6tRoZVUQ",
-          "shortIds": ["01234567", "abcdef12"],
-          "spiderX": "/"
-        }
+  "inbounds": [{
+    "port": 8080,
+    "listen": "127.0.0.1",
+    "protocol": "vmess",
+    "settings": {
+      "clients": [{
+        "id": "6a316e3b-40fc-4eca-aab2-7290734e075d",
+        "alterId": 0
+      }]
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+        "path": "/ws"
       }
     }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "tag": "direct"
-    }
-  ]
+  }]
 }
-EOF
